@@ -7,8 +7,10 @@ class JwtStorageService {
     getToken() {
         return localStorage.getItem(APP_KEYS.STORAGE_KEYS.TOKEN);
     }
-    setToken(token: string | null) {
-        localStorage.setItem(APP_KEYS.STORAGE_KEYS.TOKEN, token as string);
+    setToken(token?: string) {
+        if(token) {
+            localStorage.setItem(APP_KEYS.STORAGE_KEYS.TOKEN, token as string);
+        }
     }
     removeToken() {
         localStorage.removeItem(APP_KEYS.STORAGE_KEYS.TOKEN);

@@ -2,7 +2,6 @@ import Axios, { AxiosRequestConfig, AxiosError } from 'axios';
 
 export const AXIOS_INSTANCE = Axios.create({
   baseURL: import.meta.env.VITE_BACKEND_URL ?? '',
-  withCredentials: true,
 });
 
 export const mainAxios = async <T>(

@@ -1,20 +1,29 @@
 .signInContainer {
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
-    align-items: flex-end;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
 }
 
-.backLink {
-    text-decoration: none;
-    color: #1976d2;
+.logoWrapper {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1200px;
+    margin: 8px 0px;
+    padding: 8px 24px;
+    background-color: transparent;
 }
 
-.MuiTableCell-root {
-    font-size: 16px;
+.illustrationWrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: -1;
 }
-
-@media screen and (max-width: 900px) {
-    .container {
-        margin: 20px;
-    }
-  }

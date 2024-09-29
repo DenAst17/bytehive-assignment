@@ -1,0 +1,69 @@
+.loginContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 24px;
+  max-width: 400px;
+  margin: auto;
+  border-radius: 20px;
+  box-shadow: 0px 6px 30px 0px #00000014;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.loginLinks {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 396px;
+  margin-bottom: 16px;
+}
+
+.forgotPasswordLink {
+  color: #6366F1;
+}
+
+.registerLink {
+  color: #6366F1;
+  margin-left: 3px;
+  font-weight: 400;
+}
+
+.loginTitle {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.6px;
+  text-align: left;
+}
+
+.registerText {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21.98px;
+  text-align: left;
+  color: #6C737F;
+}
+
+.backContainer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 32px;
+  gap: 8px;
+}
+
+.backText {
+  text-align: center;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21.98px;
+  text-align: left;
+}
+
+.arrowLeft {
+  width: 20px;
+  height: 20px;
+}
