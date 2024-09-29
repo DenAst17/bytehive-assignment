@@ -1,5 +1,4 @@
 /* eslint-disable */
-import { useEffect, useState } from 'react';
 
 import './index.css'
 import LoginComponent from '../../components/auth/login';
