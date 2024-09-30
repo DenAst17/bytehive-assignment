@@ -3,7 +3,7 @@
 import DashboardComponent from '../../components/dashboard/dashboard.component';
 import './index.css'
 
-function HomePageContainer() {
+const DashboardPageContainer = () => {
 
     return (
         <div className="container">
@@ -12,4 +12,4 @@ function HomePageContainer() {
     );
 }
 
-export default HomePageContainer;
+export default DashboardPageContainer;

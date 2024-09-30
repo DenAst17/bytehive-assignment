@@ -5,7 +5,7 @@ export const QUERY_KEYS = {
 };
 
 export const ROUTER_KEYS = {
-  HOME: '/',
+  DASHBOARD: '/',
   LOGIN: '/login',
 };
 

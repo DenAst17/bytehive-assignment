@@ -5,7 +5,7 @@ import LoginComponent from '../../components/auth/login.component';
 import Logo from '../../assets/logo.svg';
 import BackgroundIllustraion from '../../assets/hero-illustration.svg';
 
-function LoginPageContainer() {
+const LoginPageContainer = () => {
     return (
         <div className="signInContainer">
             <div className='logoWrapper'>

@@ -1,0 +1,91 @@
+.logoContainer {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.menuIconContainer {
+  display: flex;
+  gap: 16px;
+}
+
+.logoIcon {
+  display: flex;
+  align-items: center;
+}
+
+.navigationContainer {
+  background: #1C2536;
+  padding: 24px 16px;
+}
+
+.title {
+  width: 192px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.6px;
+  text-align: left;
+  color: #F3F4F6;
+}
+
+.description {
+  width: 192px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 19.92px;
+  text-align: left;
+  color: #B5BCC4;
+}
+
+.menuButtonContainer {
+  padding: 6px 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.buttonText {
+  color: #B5BCC4;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: left;
+}
+
+.analyticsSectionTitle {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 30px;
+  letter-spacing: 0.5px;
+  text-align: left;
+  color: #B5BCC4;
+}
+
+.mainTabs {
+  margin-bottom: 16px;
+}
+
+.analyticsSectionTitle {
+  margin-bottom: 4px;
+}
+
+.analyticsTabs {
+  margin-bottom: 24px;
+}
+
+.documentationButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  padding: 4px 51.5px;
+  margin: 24px 8px;
+  border: 1px solid #F3F4F6
+}
+
+.documentationText {
+  color: #F3F4F6;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: left;
+}

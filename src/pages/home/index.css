@@ -1,6 +1,9 @@
 .container {
     margin: 0px 100px;
     max-width: 2560px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .MuiTableCell-root {
