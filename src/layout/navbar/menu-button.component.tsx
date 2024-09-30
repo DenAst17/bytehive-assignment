@@ -1,5 +1,5 @@
 import React from "react";
-import ChevronRight from '../../assets/icons/chevron-right.svg';
+import ChevronRight from "../../assets/icons/chevron-right.svg";
 import "./navbar.component.css";
 
 type OwnProps = {
@@ -8,8 +8,11 @@ type OwnProps = {
   hasChevron?: boolean;
 };
 
-const MenuButton: React.FC<OwnProps> = ({ text, iconSrc, hasChevron = false }) => {
-
+const MenuButton: React.FC<OwnProps> = ({
+  text,
+  iconSrc,
+  hasChevron = false,
+}) => {
   return (
     <nav className="menuButtonContainer">
       <div className="menuIconContainer">

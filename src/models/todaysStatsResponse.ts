@@ -5,9 +5,9 @@
  * Documentation for interview endpoints
  * OpenAPI spec version: 1.0.0
  */
-import type { TodaysStatsResponseCost } from './todaysStatsResponseCost';
-import type { TodaysStatsResponseProfit } from './todaysStatsResponseProfit';
-import type { TodaysStatsResponseSales } from './todaysStatsResponseSales';
+import type { TodaysStatsResponseCost } from "./todaysStatsResponseCost";
+import type { TodaysStatsResponseProfit } from "./todaysStatsResponseProfit";
+import type { TodaysStatsResponseSales } from "./todaysStatsResponseSales";
 
 export interface TodaysStatsResponse {
   cost: TodaysStatsResponseCost;

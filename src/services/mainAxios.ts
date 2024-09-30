@@ -1,21 +1,21 @@
-import Axios, { AxiosRequestConfig, AxiosError } from 'axios';
-import { jwtStorageService } from './jwt.storage.service';
+import Axios, { AxiosRequestConfig, AxiosError } from "axios";
+import { jwtStorageService } from "./jwt.storage.service";
 
 export const AXIOS_INSTANCE = Axios.create({
-  baseURL: import.meta.env.VITE_BACKEND_URL ?? '',
+  baseURL: import.meta.env.VITE_BACKEND_URL ?? "",
 });
 
 AXIOS_INSTANCE.interceptors.request.use(
   (config) => {
     const token = jwtStorageService.getToken();
     if (token) {
-      config.headers['Authorization'] = `Bearer ${token}`;
+      config.headers["Authorization"] = `Bearer ${token}`;
     }
     return config;
   },
   (error) => {
     return Promise.reject(error);
-  }
+  },
 );
 
 export const mainAxios = async <T>(
@@ -23,7 +23,7 @@ export const mainAxios = async <T>(
   options?: AxiosRequestConfig,
 ): Promise<T> => {
   const source = Axios.CancelToken.source();
-  
+
   const promise = AXIOS_INSTANCE({
     ...config,
     ...options,
@@ -32,7 +32,7 @@ export const mainAxios = async <T>(
 
   // @ts-ignore
   promise.cancel = () => {
-    source.cancel('Query was cancelled');
+    source.cancel("Query was cancelled");
   };
 
   return promise;

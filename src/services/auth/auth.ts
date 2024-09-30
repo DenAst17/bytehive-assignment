@@ -5,81 +5,94 @@
  * Documentation for interview endpoints
  * OpenAPI spec version: 1.0.0
  */
-import {
-  useMutation
-} from 'react-query'
+import { useMutation } from "react-query";
 import type {
   MutationFunction,
   UseMutationOptions,
-  UseMutationResult
-} from 'react-query'
-import type {
-  AuthResponseDto,
-  LoginRequestDto
-} from '../../models'
-import { mainAxios } from '.././mainAxios';
-import type { ErrorType, BodyType } from '.././mainAxios';
-
+  UseMutationResult,
+} from "react-query";
+import type { AuthResponseDto, LoginRequestDto } from "../../models";
+import { mainAxios } from ".././mainAxios";
+import type { ErrorType, BodyType } from ".././mainAxios";
 
 type SecondParameter<T extends (...args: any) => any> = Parameters<T>[1];
-
 
 /**
  * @summary User login
  */
 export const postApiAuthLogin = (
   loginRequestDto: BodyType<LoginRequestDto>,
-  options?: SecondParameter<typeof mainAxios>,) => {
-
-
+  options?: SecondParameter<typeof mainAxios>,
+) => {
   return mainAxios<AuthResponseDto>(
     {
-      url: `/api/auth/login`, method: 'POST',
-      headers: { 'Content-Type': 'application/json', },
-      data: loginRequestDto
+      url: `/api/auth/login`,
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      data: loginRequestDto,
     },
-    options);
-}
+    options,
+  );
+};
 
-
-
-export const getPostApiAuthLoginMutationOptions = <TError = ErrorType<void>,
-  TContext = unknown>(options?: { mutation?: UseMutationOptions<Awaited<ReturnType<typeof postApiAuthLogin>>, TError, { data: BodyType<LoginRequestDto> }, TContext>, request?: SecondParameter<typeof mainAxios> }
-  ): UseMutationOptions<Awaited<ReturnType<typeof postApiAuthLogin>>, TError, { data: BodyType<LoginRequestDto> }, TContext> => {
-  const { mutation: mutationOptions, request: requestOptions } = options ?? {};
-
-
-
-
-  const mutationFn: MutationFunction<Awaited<ReturnType<typeof postApiAuthLogin>>, { data: BodyType<LoginRequestDto> }> = (props) => {
-    const { data } = props ?? {};
-
-    return postApiAuthLogin(data, requestOptions)
-  }
-
-
-
-
-  return { mutationFn, ...mutationOptions }
-}
-
-export type PostApiAuthLoginMutationResult = NonNullable<Awaited<ReturnType<typeof postApiAuthLogin>>>
-export type PostApiAuthLoginMutationBody = BodyType<LoginRequestDto>
-export type PostApiAuthLoginMutationError = ErrorType<void>
-
-/**
-* @summary User login
-*/
-export const usePostApiAuthLogin = <TError = ErrorType<void>,
-  TContext = unknown>(options?: { mutation?: UseMutationOptions<Awaited<ReturnType<typeof postApiAuthLogin>>, TError, { data: BodyType<LoginRequestDto> }, TContext>, request?: SecondParameter<typeof mainAxios> }
-  ): UseMutationResult<
+export const getPostApiAuthLoginMutationOptions = <
+  TError = ErrorType<void>,
+  TContext = unknown,
+>(options?: {
+  mutation?: UseMutationOptions<
     Awaited<ReturnType<typeof postApiAuthLogin>>,
     TError,
     { data: BodyType<LoginRequestDto> },
     TContext
-  > => {
+  >;
+  request?: SecondParameter<typeof mainAxios>;
+}): UseMutationOptions<
+  Awaited<ReturnType<typeof postApiAuthLogin>>,
+  TError,
+  { data: BodyType<LoginRequestDto> },
+  TContext
+> => {
+  const { mutation: mutationOptions, request: requestOptions } = options ?? {};
 
+  const mutationFn: MutationFunction<
+    Awaited<ReturnType<typeof postApiAuthLogin>>,
+    { data: BodyType<LoginRequestDto> }
+  > = (props) => {
+    const { data } = props ?? {};
+
+    return postApiAuthLogin(data, requestOptions);
+  };
+
+  return { mutationFn, ...mutationOptions };
+};
+
+export type PostApiAuthLoginMutationResult = NonNullable<
+  Awaited<ReturnType<typeof postApiAuthLogin>>
+>;
+export type PostApiAuthLoginMutationBody = BodyType<LoginRequestDto>;
+export type PostApiAuthLoginMutationError = ErrorType<void>;
+
+/**
+ * @summary User login
+ */
+export const usePostApiAuthLogin = <
+  TError = ErrorType<void>,
+  TContext = unknown,
+>(options?: {
+  mutation?: UseMutationOptions<
+    Awaited<ReturnType<typeof postApiAuthLogin>>,
+    TError,
+    { data: BodyType<LoginRequestDto> },
+    TContext
+  >;
+  request?: SecondParameter<typeof mainAxios>;
+}): UseMutationResult<
+  Awaited<ReturnType<typeof postApiAuthLogin>>,
+  TError,
+  { data: BodyType<LoginRequestDto> },
+  TContext
+> => {
   const mutationOptions = getPostApiAuthLoginMutationOptions(options);
 
   return useMutation(mutationOptions);
-}
+};

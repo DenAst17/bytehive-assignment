@@ -15,7 +15,7 @@
 }
 
 .navigationContainer {
-  background: #1C2536;
+  background: #1c2536;
   padding: 24px 16px;
 }
 
@@ -25,7 +25,7 @@
   font-weight: 700;
   line-height: 21.6px;
   text-align: left;
-  color: #F3F4F6;
+  color: #f3f4f6;
 }
 
 .description {
@@ -34,7 +34,7 @@
   font-weight: 500;
   line-height: 19.92px;
   text-align: left;
-  color: #B5BCC4;
+  color: #b5bcc4;
 }
 
 .menuButtonContainer {
@@ -44,7 +44,7 @@
 }
 
 .buttonText {
-  color: #B5BCC4;
+  color: #b5bcc4;
   font-size: 14px;
   font-weight: 600;
   line-height: 24px;
@@ -57,7 +57,7 @@
   line-height: 30px;
   letter-spacing: 0.5px;
   text-align: left;
-  color: #B5BCC4;
+  color: #b5bcc4;
 }
 
 .mainTabs {
@@ -79,11 +79,11 @@
   background: transparent;
   padding: 4px 51.5px;
   margin: 24px 8px;
-  border: 1px solid #F3F4F6
+  border: 1px solid #f3f4f6;
 }
 
 .documentationText {
-  color: #F3F4F6;
+  color: #f3f4f6;
   font-size: 14px;
   font-weight: 600;
   line-height: 24px;

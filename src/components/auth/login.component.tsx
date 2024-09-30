@@ -1,8 +1,8 @@
-import { Button, TextField, Box } from '@mui/material';
-import { useFormik } from 'formik';
-import signInConfig from '../forms/use.signin.formik';
-import ArrowLeft from '../../assets/icons/arrow-left.svg';
-import './login.component.css';
+import { Button, TextField, Box } from "@mui/material";
+import { useFormik } from "formik";
+import signInConfig from "../forms/use.signin.formik";
+import ArrowLeft from "../../assets/icons/arrow-left.svg";
+import "./login.component.css";
 
 const LoginComponent = () => {
   const signInFormik = useFormik(signInConfig);
@@ -10,20 +10,22 @@ const LoginComponent = () => {
   return (
     <div>
       <Box className="backContainer">
-        <div className='arrowLeft'>
+        <div className="arrowLeft">
           <img src={ArrowLeft} />
         </div>
-        <div className='backText'>
-          Back
-        </div>
+        <div className="backText">Back</div>
       </Box>
-      <Box component="form" onSubmit={(e) => { e.preventDefault(); }} noValidate className="loginContainer">
-
+      <Box
+        component="form"
+        onSubmit={(e) => {
+          e.preventDefault();
+        }}
+        noValidate
+        className="loginContainer"
+      >
         <Box className="loginLinks">
-          <div className='loginTitle'>
-            Log in
-          </div>
-          <div className='registerText'>
+          <div className="loginTitle">Log in</div>
+          <div className="registerText">
             Don't have an account?
             <a href="#" className="registerLink">
               {"Register"}
@@ -60,7 +62,7 @@ const LoginComponent = () => {
               "&:before, &:after, &:hover:before": {
                 borderBottom: "none",
               },
-            }
+            },
           }}
         />
 
@@ -85,7 +87,7 @@ const LoginComponent = () => {
               "&:before, &:after, &:hover:before": {
                 borderBottom: "none",
               },
-            }
+            },
           }}
         />
 
@@ -105,7 +107,9 @@ const LoginComponent = () => {
             height: "42px",
             margin: "16px 0px",
           }}
-          onClick={() => { signInFormik.handleSubmit(); }}
+          onClick={() => {
+            signInFormik.handleSubmit();
+          }}
         >
           Log In
         </Button>

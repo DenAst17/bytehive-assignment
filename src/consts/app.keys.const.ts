@@ -5,12 +5,12 @@ export const QUERY_KEYS = {
 };
 
 export const ROUTER_KEYS = {
-  DASHBOARD: '/',
-  LOGIN: '/login',
+  DASHBOARD: "/",
+  LOGIN: "/login",
 };
 
 export const STORAGE_KEYS = {
-  JWT_TOKEN: 'JWT_TOKEN',
-  USER: 'user',
-  TOKEN: 'token'
+  JWT_TOKEN: "JWT_TOKEN",
+  USER: "user",
+  TOKEN: "token",
 };

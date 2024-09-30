@@ -1,17 +1,17 @@
 .container {
-    margin: 0px 100px;
-    max-width: 2560px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  margin: 0px 100px;
+  max-width: 2560px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .MuiTableCell-root {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 @media screen and (max-width: 900px) {
-    .container {
-        margin: 20px;
-    }
+  .container {
+    margin: 20px;
   }
+}

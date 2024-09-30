@@ -1,6 +1,6 @@
 import React from "react";
 
-import LogoIcon from '../../assets/icons/small-logo.svg';
+import LogoIcon from "../../assets/icons/small-logo.svg";
 import "./navbar.component.css";
 import MenuButton from "./menu-button.component";
 import Overview from "../../assets/icons/overview.svg";
@@ -17,7 +17,6 @@ import { MAIN_PAGES, ANALYTICS_PAGES } from "../../consts/pages.enum";
 type OwnProps = Record<string, unknown>;
 
 const Navbar: React.FC<OwnProps> = () => {
-
   return (
     <nav className="navigationContainer">
       <div className="logoContainer">
@@ -31,22 +30,10 @@ const Navbar: React.FC<OwnProps> = () => {
       </div>
 
       <section className="mainTabs">
-        <MenuButton
-          iconSrc={Overview}
-          text={MAIN_PAGES.OVERVIEW}
-        />
-        <MenuButton
-          iconSrc={Analytics}
-          text={MAIN_PAGES.ANALYTICS}
-        />
-        <MenuButton
-          iconSrc={Ecommerce}
-          text={MAIN_PAGES.ECOMMERCE}
-        />
-        <MenuButton
-          iconSrc={Crypto}
-          text={MAIN_PAGES.CRYPTO}
-        />
+        <MenuButton iconSrc={Overview} text={MAIN_PAGES.OVERVIEW} />
+        <MenuButton iconSrc={Analytics} text={MAIN_PAGES.ANALYTICS} />
+        <MenuButton iconSrc={Ecommerce} text={MAIN_PAGES.ECOMMERCE} />
+        <MenuButton iconSrc={Crypto} text={MAIN_PAGES.CRYPTO} />
       </section>
 
       <div className="analyticsSectionTitle">ANALYTICS</div>

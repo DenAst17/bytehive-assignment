@@ -5,85 +5,90 @@
  * Documentation for interview endpoints
  * OpenAPI spec version: 1.0.0
  */
-import {
-  useQuery
-} from 'react-query'
+import { useQuery } from "react-query";
 import type {
   QueryFunction,
   QueryKey,
   UseQueryOptions,
-  UseQueryResult
-} from 'react-query'
-import type {
-  TodaysStatsResponse
-} from '../../models'
-import { mainAxios } from '.././mainAxios';
-import type { ErrorType } from '.././mainAxios';
-
+  UseQueryResult,
+} from "react-query";
+import type { TodaysStatsResponse } from "../../models";
+import { mainAxios } from ".././mainAxios";
+import type { ErrorType } from ".././mainAxios";
 
 type SecondParameter<T extends (...args: any) => any> = Parameters<T>[1];
-
 
 /**
  * @summary Get today's stats
  */
 export const getApiStatsTodaysStats = (
-    
- options?: SecondParameter<typeof mainAxios>,signal?: AbortSignal
+  options?: SecondParameter<typeof mainAxios>,
+  signal?: AbortSignal,
 ) => {
-      
-      
-      return mainAxios<TodaysStatsResponse>(
-      {url: `/api/stats/todays-stats`, method: 'GET', signal
-    },
-      options);
-    }
-  
+  return mainAxios<TodaysStatsResponse>(
+    { url: `/api/stats/todays-stats`, method: "GET", signal },
+    options,
+  );
+};
 
 export const getGetApiStatsTodaysStatsQueryKey = () => {
-    return [`/api/stats/todays-stats`] as const;
-    }
+  return [`/api/stats/todays-stats`] as const;
+};
 
-    
-export const getGetApiStatsTodaysStatsQueryOptions = <TData = Awaited<ReturnType<typeof getApiStatsTodaysStats>>, TError = ErrorType<void>>( options?: { query?:UseQueryOptions<Awaited<ReturnType<typeof getApiStatsTodaysStats>>, TError, TData>, request?: SecondParameter<typeof mainAxios>}
-) => {
+export const getGetApiStatsTodaysStatsQueryOptions = <
+  TData = Awaited<ReturnType<typeof getApiStatsTodaysStats>>,
+  TError = ErrorType<void>,
+>(options?: {
+  query?: UseQueryOptions<
+    Awaited<ReturnType<typeof getApiStatsTodaysStats>>,
+    TError,
+    TData
+  >;
+  request?: SecondParameter<typeof mainAxios>;
+}) => {
+  const { query: queryOptions, request: requestOptions } = options ?? {};
 
-const {query: queryOptions, request: requestOptions} = options ?? {};
+  const queryKey =
+    queryOptions?.queryKey ?? getGetApiStatsTodaysStatsQueryKey();
 
-  const queryKey =  queryOptions?.queryKey ?? getGetApiStatsTodaysStatsQueryKey();
+  const queryFn: QueryFunction<
+    Awaited<ReturnType<typeof getApiStatsTodaysStats>>
+  > = ({ signal }) => getApiStatsTodaysStats(requestOptions, signal);
 
-  
+  return { queryKey, queryFn, ...queryOptions } as UseQueryOptions<
+    Awaited<ReturnType<typeof getApiStatsTodaysStats>>,
+    TError,
+    TData
+  > & { queryKey: QueryKey };
+};
 
-    const queryFn: QueryFunction<Awaited<ReturnType<typeof getApiStatsTodaysStats>>> = ({ signal }) => getApiStatsTodaysStats(requestOptions, signal);
-
-      
-
-      
-
-   return  { queryKey, queryFn, ...queryOptions} as UseQueryOptions<Awaited<ReturnType<typeof getApiStatsTodaysStats>>, TError, TData> & { queryKey: QueryKey }
-}
-
-export type GetApiStatsTodaysStatsQueryResult = NonNullable<Awaited<ReturnType<typeof getApiStatsTodaysStats>>>
-export type GetApiStatsTodaysStatsQueryError = ErrorType<void>
-
+export type GetApiStatsTodaysStatsQueryResult = NonNullable<
+  Awaited<ReturnType<typeof getApiStatsTodaysStats>>
+>;
+export type GetApiStatsTodaysStatsQueryError = ErrorType<void>;
 
 /**
  * @summary Get today's stats
  */
 
-export function useGetApiStatsTodaysStats<TData = Awaited<ReturnType<typeof getApiStatsTodaysStats>>, TError = ErrorType<void>>(
-  options?: { query?:UseQueryOptions<Awaited<ReturnType<typeof getApiStatsTodaysStats>>, TError, TData>, request?: SecondParameter<typeof mainAxios>}
+export function useGetApiStatsTodaysStats<
+  TData = Awaited<ReturnType<typeof getApiStatsTodaysStats>>,
+  TError = ErrorType<void>,
+>(options?: {
+  query?: UseQueryOptions<
+    Awaited<ReturnType<typeof getApiStatsTodaysStats>>,
+    TError,
+    TData
+  >;
+  request?: SecondParameter<typeof mainAxios>;
+}): UseQueryResult<TData, TError> & { queryKey: QueryKey } {
+  const queryOptions = getGetApiStatsTodaysStatsQueryOptions(options);
 
-  ):  UseQueryResult<TData, TError> & { queryKey: QueryKey } {
+  const query = useQuery(queryOptions) as UseQueryResult<TData, TError> & {
+    queryKey: QueryKey;
+  };
 
-  const queryOptions = getGetApiStatsTodaysStatsQueryOptions(options)
-
-  const query = useQuery(queryOptions) as  UseQueryResult<TData, TError> & { queryKey: QueryKey };
-
-  query.queryKey = queryOptions.queryKey ;
+  query.queryKey = queryOptions.queryKey;
 
   return query;
 }
-
-
-
