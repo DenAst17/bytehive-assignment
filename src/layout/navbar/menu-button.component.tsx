@@ -14,7 +14,7 @@ const MenuButton: React.FC<OwnProps> = ({
   hasChevron = false,
 }) => {
   return (
-    <nav className="menuButtonContainer">
+    <div className="menuButtonContainer">
       <div className="menuIconContainer">
         <div className="logoIcon">
           <img src={iconSrc} />
@@ -26,7 +26,7 @@ const MenuButton: React.FC<OwnProps> = ({
           <img src={ChevronRight} />
         </div>
       )}
-    </nav>
+    </div>
   );
 };
 

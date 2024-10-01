@@ -1,5 +1,5 @@
 import { FormikErrors } from "formik";
-import { REGEXES } from "../../../consts/regex.const";
+import { REGEXES } from "../../../shared/consts/regex.const";
 import { LoginRequestDto } from "../../../models";
 
 const signInValidate = (values: LoginRequestDto) => {

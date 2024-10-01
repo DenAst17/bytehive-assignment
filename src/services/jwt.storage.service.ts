@@ -1,4 +1,4 @@
-import { STORAGE_KEYS } from "../consts/app.keys.const";
+import { STORAGE_KEYS } from "../shared/consts/app.keys.const";
 
 class JwtStorageService {
   constructor() {

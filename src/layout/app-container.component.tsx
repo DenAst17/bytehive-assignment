@@ -2,7 +2,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import Navbar from "./navbar/navbar.component";
 import DashboardPageContainer from "../pages/home";
 import "./app-container.component.css";
-import { ROUTER_KEYS } from "../consts/app.keys.const";
+import { ROUTER_KEYS } from "../shared/consts/app.keys.const";
 
 const AppContainer = () => {
   return (

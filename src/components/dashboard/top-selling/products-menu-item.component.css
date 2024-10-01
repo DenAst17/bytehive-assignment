@@ -1,0 +1,53 @@
+.topProductContainer {
+  padding: 10px 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.avatarImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 16px;
+}
+
+.topProductTitleCategory {
+  margin-right: 39.5px;
+}
+
+.topProductTitle {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21.98px;
+  text-align: left;
+}
+
+.topProductSubtitle {
+  color: #6c737f;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21.98px;
+  text-align: left;
+}
+
+.topProductPurchasesQuantity {
+  color: #15b79e;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21.98px;
+  text-align: left;
+}
+
+.leaderboardPosition {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0.1599999964237213px;
+  text-align: left;
+  border-radius: 12px;
+  background: #11192714;
+  padding: 0px 11px;
+  display: flex;
+  align-items: center;
+}

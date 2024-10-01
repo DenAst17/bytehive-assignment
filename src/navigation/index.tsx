@@ -7,7 +7,7 @@ import {
 import LoginPageContainer from "../pages/signin";
 import { jwtStorageService } from "../services/jwt.storage.service";
 import AppContainer from "../layout/app-container.component";
-import { ROUTER_KEYS } from "../consts/app.keys.const";
+import { ROUTER_KEYS } from "../shared/consts/app.keys.const";
 
 export const MainRouter = () => {
   const isAuthorized = jwtStorageService.isToken();

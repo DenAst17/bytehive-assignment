@@ -41,6 +41,7 @@
   padding: 6px 16px;
   display: flex;
   justify-content: space-between;
+  background: transparent;
 }
 
 .buttonText {
@@ -69,7 +70,7 @@
 }
 
 .analyticsTabs {
-  margin-bottom: 24px;
+  margin-bottom: 48px;
 }
 
 .documentationButton {

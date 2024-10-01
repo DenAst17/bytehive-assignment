@@ -7,10 +7,8 @@
  */
 
 export interface UserDto {
-  _id: string;
-  companyBalance: number;
-  creationTime: string;
+  id: string;
+  avatar: string;
   email: string;
-  password: string;
-  userBalance: number;
+  name: string;
 }

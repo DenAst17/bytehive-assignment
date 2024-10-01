@@ -12,7 +12,7 @@ import Orders from "../../assets/icons/orders.svg";
 import Invoices from "../../assets/icons/invoices.svg";
 import Logistics from "../../assets/icons/logistics.svg";
 import Documentation from "../../assets/icons/documentation.svg";
-import { MAIN_PAGES, ANALYTICS_PAGES } from "../../consts/pages.enum";
+import { MAIN_PAGES, ANALYTICS_PAGES } from "../../shared/consts/pages.enum";
 
 type OwnProps = Record<string, unknown>;
 
