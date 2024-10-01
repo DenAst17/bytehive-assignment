@@ -91,7 +91,7 @@ const renderCustomLegend = (): JSX.Element => {
 };
 
 const DashboardComponent = () => {
-  const { data: products, isLoading: isProductsLoading } = useGetApiProducts();
+  const { data: products } = useGetApiProducts();
   return (
     <Box className="dashboardContainer">
       <header className="dashboardHeader">
