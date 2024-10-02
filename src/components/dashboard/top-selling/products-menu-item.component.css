@@ -1,7 +1,14 @@
-.topProductContainer {
+.topProductGridContainer {
+  display: grid;
+  grid-template-columns: 205.5px 154.5px 40px;
+  gap: 16px;
   padding: 10px 16px;
+  align-items: center;
+}
+
+.topProductBlock1 {
   display: flex;
-  justify-content: space-between;
+  align-items: center;
 }
 
 .avatarImage {
@@ -13,7 +20,8 @@
 }
 
 .topProductTitleCategory {
-  margin-right: 39.5px;
+  display: flex;
+  flex-direction: column;
 }
 
 .topProductTitle {
@@ -31,6 +39,11 @@
   text-align: left;
 }
 
+.topProductBlock2 {
+  display: flex;
+  flex-direction: column;
+}
+
 .topProductPurchasesQuantity {
   color: #15b79e;
   font-size: 14px;
@@ -39,15 +52,21 @@
   text-align: left;
 }
 
+.topProductBlock3 {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 16px;
+}
+
 .leaderboardPosition {
   font-size: 13px;
   font-weight: 500;
   line-height: 18px;
-  letter-spacing: 0.1599999964237213px;
-  text-align: left;
+  letter-spacing: 0.16px;
+  text-align: center;
   border-radius: 12px;
   background: #11192714;
-  padding: 0px 11px;
+  padding: 8.5px 11px;
   display: flex;
   align-items: center;
 }

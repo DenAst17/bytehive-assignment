@@ -114,8 +114,8 @@ const DashboardComponent = () => {
           >
             <div className="salesRevenueTitle">Sales Revenue</div>
             <LineChart
-              width={917}
-              height={565}
+              width={869}
+              height={501}
               data={mockSales}
               className="salesRevenueChart"
             >
@@ -159,6 +159,9 @@ const DashboardComponent = () => {
           <CardContent
             sx={{
               padding: "0px",
+              "&:last-child": {
+                paddingBottom: "0px",
+              },
             }}
           >
             <div className="topSellingProductTitle">Top Selling Products</div>
