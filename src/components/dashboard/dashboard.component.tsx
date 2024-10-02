@@ -1,18 +1,7 @@
-import { Box, Card, CardContent } from "@mui/material";
-import {
-  XAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend,
-  YAxis,
-  Area,
-  AreaChart,
-} from "recharts";
+import { Box } from "@mui/material";
 import { useGetApiProducts } from "../../services/products/products";
 import "./dashboard.component.css";
 import RefreshButton from "../../shared/components/refresh-button/refresh-button.component";
-import ArrowRight from "../../assets/icons/arrow-right.svg";
-import TopProductsMenuItem from "./top-selling/products-menu-item.component";
 import TopProductsMenu from "./top-selling/products-menu.component";
 import SalesRevenueChart from "./sales-revenue/sales-revenue-chart.component";
 
@@ -31,66 +20,6 @@ const mockSales = [
   { month: "Nov", selling: 1200, newCustomers: 1750 },
   { month: "Dec", selling: 1300, newCustomers: 1800 },
 ];
-
-const renderCustomLegend = (): JSX.Element => {
-  return (
-    <div
-      style={{
-        display: "flex",
-        gap: "13px",
-        justifyContent: "flex-end",
-        marginBottom: "10px",
-      }}
-    >
-      <div style={{ display: "flex", alignItems: "center" }}>
-        <span
-          style={{
-            display: "inline-block",
-            width: "10px",
-            height: "10px",
-            backgroundColor: "#6366F1",
-            borderRadius: "50%",
-            marginRight: "8px",
-          }}
-        ></span>
-        <span
-          style={{
-            color: "#667085",
-            fontSize: "14px",
-            fontWeight: 400,
-            lineHeight: "20px",
-          }}
-        >
-          New Customers
-        </span>
-      </div>
-      <div
-        style={{ marginRight: "20px", display: "flex", alignItems: "center" }}
-      >
-        <span
-          style={{
-            display: "inline-block",
-            width: "10px",
-            height: "10px",
-            backgroundColor: "#4338CA",
-            borderRadius: "50%",
-            marginRight: "8px",
-          }}
-        ></span>
-        <span
-          style={{
-            color: "#667085",
-            fontSize: "14px",
-            fontWeight: 400,
-            lineHeight: "20px",
-          }}
-        >
-          Up/Cross-Selling
-        </span>
-      </div>
-    </div>
-  );
-};
 
 const DashboardComponent = () => {
   const { data: products, refetch } = useGetApiProducts();
