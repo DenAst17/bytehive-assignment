@@ -54,11 +54,12 @@ const LoginComponent = () => {
               backgroundColor: "transparent",
               "&:hover": {
                 backgroundColor: "transparent",
+                borderBottom: "none",
               },
               "&.Mui-focused": {
                 backgroundColor: "transparent",
               },
-              "&:before, &:after, &:hover:before": {
+              "&:before, &:after, &:hover:before, &:hover:after": {
                 backgroundColor: "transparent",
                 borderBottom: "none",
               },
