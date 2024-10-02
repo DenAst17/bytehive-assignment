@@ -1,0 +1,37 @@
+.dashboardContainer {
+  width: 1392px;
+  padding: 24px 24px 64px;
+  margin: 0px 100px;
+}
+
+.dashboardHeader {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.dashboardTitle {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 38.4px;
+  text-align: left;
+}
+
+.dashboardMainContent {
+  display: flex;
+  gap: 32px;
+}
+
+.salesRevenueTitle {
+  font-family: Plus Jakarta Sans;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.6px;
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+.salesRevenueChart {
+  margin-top: 48px;
+}

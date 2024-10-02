@@ -1,0 +1,110 @@
+.logoContainer {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.menuIconContainer {
+  display: flex;
+  gap: 16px;
+}
+
+.logoIcon {
+  display: flex;
+  align-items: center;
+}
+
+.navigationContainer {
+  background: #1c2536;
+  padding: 24px 16px;
+}
+
+.title {
+  width: 192px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.6px;
+  text-align: left;
+  color: #f3f4f6;
+}
+
+.description {
+  width: 192px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 19.92px;
+  text-align: left;
+  color: #b5bcc4;
+}
+
+.menuButtonContainer {
+  padding: 6px 16px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  background: transparent;
+}
+
+.buttonText {
+  color: #b5bcc4;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: left;
+}
+
+.analyticsSectionTitle {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 30px;
+  letter-spacing: 0.5px;
+  text-align: left;
+  color: #b5bcc4;
+}
+
+.mainTabs {
+  margin-bottom: 16px;
+}
+
+.analyticsSectionTitle {
+  margin-bottom: 4px;
+}
+
+.analyticsTabs {
+  margin-bottom: 48px;
+}
+
+.documentationButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  padding: 4px 51.5px;
+  margin: 24px 8px;
+  border: 1px solid #f3f4f6;
+}
+
+.documentationText {
+  color: #f3f4f6;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: left;
+}
+
+.menuButtonContainer:hover {
+  background-color: #252e3e;
+}
+
+.selectedIcon {
+  filter: invert(42%) sepia(99%) saturate(4124%) hue-rotate(228deg)
+    brightness(103%) contrast(89%);
+}
+
+.selectedText {
+  color: #ffffff;
+}
+
+.selected {
+  background-color: #252e3e;
+}

@@ -1,0 +1,95 @@
+.topSellingProductTitle {
+  font-family: Plus Jakarta Sans;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.6px;
+  text-align: left;
+  margin: 32px 24px 16px;
+}
+
+.seeAllProductsButton {
+  display: flex;
+  gap: 8px;
+  padding: 6px 12px 6px 16px;
+  margin: 8px 16px;
+}
+
+.seeAllProductsText {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: left;
+}
+
+.topProductGridContainer {
+  display: grid;
+  grid-template-columns: 205.5px 154.5px 40px;
+  gap: 16px;
+  padding: 10px 16px;
+  align-items: center;
+}
+
+.topProductBlock1 {
+  display: flex;
+  align-items: center;
+}
+
+.avatarImage {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 16px;
+}
+
+.topProductTitleCategory {
+  display: flex;
+  flex-direction: column;
+}
+
+.topProductTitle {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21.98px;
+  text-align: left;
+}
+
+.topProductSubtitle {
+  color: #6c737f;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21.98px;
+  text-align: left;
+}
+
+.topProductBlock2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.topProductPurchasesQuantity {
+  color: #15b79e;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21.98px;
+  text-align: left;
+}
+
+.topProductBlock3 {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 16px;
+}
+
+.leaderboardPosition {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0.16px;
+  text-align: center;
+  border-radius: 12px;
+  background: #11192714;
+  padding: 8.5px 11px;
+  display: flex;
+  align-items: center;
+}
