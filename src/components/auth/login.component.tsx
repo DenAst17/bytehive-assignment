@@ -45,6 +45,11 @@ const LoginComponent = () => {
           onChange={signInFormik.handleChange}
           error={!!signInFormik.errors.email}
           helperText={signInFormik.errors.email}
+          slotProps={{
+            input: {
+              disableUnderline: true,
+            }
+          }}
           sx={{
             margin: "16px 0px 0px",
             backgroundColor: "#fff",
@@ -94,6 +99,11 @@ const LoginComponent = () => {
           onChange={signInFormik.handleChange}
           error={!!signInFormik.errors.password}
           helperText={signInFormik.errors.password}
+          slotProps={{
+            input: {
+              disableUnderline: true,
+            }
+          }}
           sx={{
             margin: "16px 0px 0px",
             backgroundColor: "#fff",
