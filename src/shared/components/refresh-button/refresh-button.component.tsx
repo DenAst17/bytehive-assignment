@@ -1,9 +1,13 @@
 import ChevronRight from "../../../assets/icons/refresh.svg";
 import "./refresh-button.component.css";
 
-const RefreshButton = () => {
+type OwnProps = {
+  onClick: () => void;
+};
+
+const RefreshButton: React.FC<OwnProps> = ({ onClick }) => {
   return (
-    <button className="refreshButtonContainer">
+    <button className="refreshButtonContainer" onClick={onClick}>
       <img src={ChevronRight} />
       <div className="refreshText">Sync Data</div>
     </button>

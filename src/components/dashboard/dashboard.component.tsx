@@ -1,18 +1,20 @@
 import { Box, Card, CardContent } from "@mui/material";
 import {
-  LineChart,
-  Line,
   XAxis,
   CartesianGrid,
   Tooltip,
   Legend,
   YAxis,
+  Area,
+  AreaChart,
 } from "recharts";
 import { useGetApiProducts } from "../../services/products/products";
 import "./dashboard.component.css";
 import RefreshButton from "../../shared/components/refresh-button/refresh-button.component";
 import ArrowRight from "../../assets/icons/arrow-right.svg";
 import TopProductsMenuItem from "./top-selling/products-menu-item.component";
+import TopProductsMenu from "./top-selling/products-menu.component";
+import SalesRevenueChart from "./sales-revenue/sales-revenue-chart.component";
 
 const mockSales = [
   { month: "Dec", selling: 570, newCustomers: 1067 },
@@ -91,89 +93,17 @@ const renderCustomLegend = (): JSX.Element => {
 };
 
 const DashboardComponent = () => {
-  const { data: products } = useGetApiProducts();
+  const { data: products, refetch } = useGetApiProducts();
   return (
     <Box className="dashboardContainer">
       <header className="dashboardHeader">
         <div className="dashboardTitle">E-commerce</div>
-        <RefreshButton />
+        <RefreshButton onClick={refetch} />
       </header>
 
       <main className="dashboardMainContent">
-        <Card
-          sx={{
-            padding: "32px 24px 8px",
-            boxShadow: "0px 5px 22px 0px #0000000A",
-            borderRadius: "20px",
-          }}
-        >
-          <CardContent
-            sx={{
-              padding: "0px",
-            }}
-          >
-            <div className="salesRevenueTitle">Sales Revenue</div>
-            <LineChart
-              width={869}
-              height={501}
-              data={mockSales}
-              className="salesRevenueChart"
-            >
-              <CartesianGrid strokeDasharray="3 3" vertical={false} />
-              <XAxis dataKey="month" />
-              <YAxis domain={[0, 2000]} hide={true} />
-              <Tooltip />
-              <Legend
-                align="right"
-                verticalAlign="top"
-                content={renderCustomLegend}
-              />
-              <Line
-                type="monotone"
-                dataKey="selling"
-                stroke="#4338CA"
-                strokeWidth={2}
-                dot={false}
-              />
-              <Line
-                type="monotone"
-                dataKey="newCustomers"
-                stroke="#6366F1"
-                strokeWidth={2}
-                dot={false}
-                style={{
-                  background:
-                    "linear-gradient(180deg, #16B364 0%, rgba(22, 179, 100, 0.00520833) 95.54%)",
-                }}
-              />
-            </LineChart>
-          </CardContent>
-        </Card>
-        <Card
-          sx={{
-            padding: "0px",
-            boxShadow: "0px 5px 22px 0px #0000000A",
-            borderRadius: "20px",
-          }}
-        >
-          <CardContent
-            sx={{
-              padding: "0px",
-              "&:last-child": {
-                paddingBottom: "0px",
-              },
-            }}
-          >
-            <div className="topSellingProductTitle">Top Selling Products</div>
-            {products?.map((product) => (
-              <TopProductsMenuItem product={product} />
-            ))}
-            <div className="seeAllProductsButton">
-              <div className="seeAllProductsText">See All Products</div>
-              <img src={ArrowRight} />
-            </div>
-          </CardContent>
-        </Card>
+        <SalesRevenueChart sales={mockSales} />
+        {products && <TopProductsMenu products={products} />}
       </main>
     </Box>
   );

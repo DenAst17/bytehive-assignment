@@ -1,4 +1,3 @@
-// React-query keys
 export const QUERY_KEYS = {
   BASE_URL: "http://localhost:5173",
   SIGN_IN_URL: "login/",

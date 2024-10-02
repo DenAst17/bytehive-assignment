@@ -32,29 +32,6 @@
   margin-bottom: 16px;
 }
 
-.topSellingProductTitle {
-  font-family: Plus Jakarta Sans;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 21.6px;
-  text-align: left;
-  margin: 32px 24px 16px;
-}
-
 .salesRevenueChart {
   margin-top: 48px;
-}
-
-.seeAllProductsButton {
-  display: flex;
-  gap: 8px;
-  padding: 6px 12px 6px 16px;
-  margin: 8px 16px;
-}
-
-.seeAllProductsText {
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 24px;
-  text-align: left;
 }
