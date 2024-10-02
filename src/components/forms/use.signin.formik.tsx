@@ -23,7 +23,9 @@ const signInConfig = {
 
         window.location.replace("/");
       } catch {
-        toast.error("Wrong email or password");
+        toast.error("Wrong email or password", {
+          position: "bottom-center",
+        });
       }
     }
   },

@@ -54,14 +54,29 @@ const LoginComponent = () => {
               backgroundColor: "transparent",
               "&:hover": {
                 backgroundColor: "transparent",
-                borderBottom: "none",
               },
               "&.Mui-focused": {
                 backgroundColor: "transparent",
               },
               "&:before, &:after, &:hover:before": {
+                backgroundColor: "transparent",
                 borderBottom: "none",
               },
+              "&:focus": {
+                borderBottom: "none",
+              },
+            },
+            "& .MuiInputLabel-filled": {
+              "&.Mui-focused": {
+                color: "#6C737F",
+              },
+            },
+            "& .MuiFilledInput-input": {
+              fontSize: "14px",
+              fontWeight: 500,
+              lineHeight: "24px",
+              letterSpacing: "0.15px",
+              textAlign: "left",
             },
           }}
         />
@@ -82,11 +97,24 @@ const LoginComponent = () => {
             margin: "16px 0px 0px",
             backgroundColor: "#fff",
             border: "1px solid #F2F4F7",
+            borderRadius: "8px",
             "& .MuiFilledInput-root": {
               backgroundColor: "transparent",
               "&:before, &:after, &:hover:before": {
                 borderBottom: "none",
               },
+            },
+            "& .MuiInputLabel-filled": {
+              "&.Mui-focused": {
+                color: "#6C737F",
+              },
+            },
+            "& .MuiFilledInput-input": {
+              fontSize: "14px",
+              fontWeight: 500,
+              lineHeight: "24px",
+              letterSpacing: "0.15px",
+              textAlign: "left",
             },
           }}
         />

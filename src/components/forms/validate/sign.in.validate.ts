@@ -3,7 +3,7 @@ import { REGEXES } from "../../../shared/consts/regex.const";
 import { LoginRequestDto } from "../../../models";
 
 const signInValidate = (values: LoginRequestDto) => {
-  let errors = {} as FormikErrors<LoginRequestDto>;
+  const errors = {} as FormikErrors<LoginRequestDto>;
   if (!values.email) {
     errors.email = "Required";
   } else if (values.email.length > 50) {

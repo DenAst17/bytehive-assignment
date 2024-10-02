@@ -39,6 +39,7 @@
 
 .menuButtonContainer {
   padding: 6px 16px;
+  border-radius: 12px;
   display: flex;
   justify-content: space-between;
   background: transparent;
@@ -89,4 +90,21 @@
   font-weight: 600;
   line-height: 24px;
   text-align: left;
+}
+
+.menuButtonContainer:hover {
+  background-color: #252e3e;
+}
+
+.selectedIcon {
+  filter: invert(42%) sepia(99%) saturate(4124%) hue-rotate(228deg)
+    brightness(103%) contrast(89%);
+}
+
+.selectedText {
+  color: #ffffff;
+}
+
+.selected {
+  background-color: #252e3e;
 }
